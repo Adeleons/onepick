@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <style>
+        .info-wrap {
+            margin: auto;
+        }
+        ul,li{
+            text-decoration: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .time_detail{
+            padding-left: 10px;
+        }
+        .list_operation{
+            padding-left: 35px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="topnav navbar navbar-expand shadow justify-content-between justify-content-sm-start navbar-light bg-white"
+        id="sidenavAccordion">
+        <!-- Sidenav Toggle Button-->
+        <button class="btn btn-icon btn-transparent-dark order-lg-0 me-2 ms-lg-2 me-lg-0 fs-2" id="sidebarBack">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg>
+        </button>
+        <!-- Navbar Brand-->
+        <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
+        <a class="navbar-brand mx-auto" href="main.html">
+            <img src="../images/logo.png" class="w-50 mx-auto d-block" alt="...">
+        </a>
+        <button class="btn btn-icon btn-transparent-dark order-lg-0 me-2 ms-lg-2 me-lg-0 fs-2" id="sidebarToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg>
+        </button>
+    </nav>
+    <div class="container mt-2">
+        <div class="card info-wrap mb-3">
+            <img src="../images/bg_nodata.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h3 class="card-text">라이스&포테이토</h3>
+            </div>
+        </div>
+        <div class="card info-wrap mb-3">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="placeinfo_default">
+                        <div class="place_address">
+                            <h4 class="tit_detail d-inline">
+                                <!--<span class="ico_comm ico_address">위치</span>-->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                                  <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+                                </svg>
+                                
+                            </h4>
+                            <div class="location_detail d-inline">
+                                <span class="txt_address">경기 수원시 장안구
+                                    송원로92번길 2
+                                    상가 101호 (우)16284</span>
+                                <span class="txt_addrnum">지번<span class="bg_bar"></span>조원동 750</span>
+                            </div>
+                        </div>
+                        <div class="place_time">
+                            <h4 class="tit_detail d-inline">
+                                <!--<span class="ico_comm ico_address">위치</span>-->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+                                  <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
+                                  <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
+                                </svg>
+                                
+                            </h4>
+                            <div class="time_detail d-inline">
+                                <strong class="tit_operation fst text-success">
+                                    <span class="open">영업중</span>
+                                </strong>
+                                <ul class="list_operation">
+                                    <li>
+                                        <span class="txt_operation">
+                                            화~일 <span class="time_operation">11:30 ~ 21:00</span>
+                                        </span>
+                                        <a href="#none" class="btn_more" data-logevent="main_info,more_timeinfo">
+                                            <span class="ico_comm ico_more">더보기</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu mt-2">
+            <h3>대표메뉴</h3>
+            <div class="card info-wrap mb-3">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div class="placeinfo_default">
+                            <div>
+                                <img src="menu.png">
+                            </div>
+                            <div class="location_detail">
+                                <span class="txt_address">경기 수원시 장안구
+                                    송원로92번길 2
+                                    상가 101호 (우)16284</span>
+                                <span class="txt_addrnum">지번<span class="bg_bar"></span>조원동 750</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
