@@ -82,7 +82,18 @@
 
     
     </style>
-       
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "POST",
+                url: "/gangnam",
+                data: {},
+                success: function (response) {
+                    $('#menu').text(response['menu'])
+                }
+            })
+        });
+    </script>
 </head>
 
 <body>
@@ -101,7 +112,7 @@
         <!-- Navbar Brand-->
         <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
         <a class="navbar-brand mx-auto" href="main.html">
-            <img src="../images/logo.png" class="w-50 mx-auto d-block" alt="...">
+            <img src="../static/images/logo.png" class="w-50 mx-auto d-block" alt="...">
         </a>
         <button class="btn btn-icon btn-transparent-dark order-lg-0 me-2 ms-lg-2 me-lg-0 fs-2" id="sidebarToggle">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -168,7 +179,7 @@
             </div>
         </div>
         <div class="btn-select mt-4">
-            <button type="button" class="btn btn-primary btn-lg">메뉴 추천받기</button>
+            <button type="button" class="btn btn-primary btn-lg" onClick="location.href='real_menu_result.html'">메뉴 추천받기</button>
         </div>
     </div>
 

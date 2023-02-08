@@ -21,7 +21,7 @@
 
     .mytitle {
     width: 100%;
-    height: 280px;
+    /*height: 280px;*/
 
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
     background-position: center
@@ -39,6 +39,18 @@
 
     
 </style>
+<script>
+  $(document).ready(function () {
+      $.ajax({
+          type: "POST",
+          url: "/gangnam",
+          data: {},
+          success: function (response) {
+              $('#menu').text(response['menu'])
+          }
+      })
+  });
+</script>
 
 </head>
 
@@ -57,7 +69,7 @@
         <!-- Navbar Brand-->
         <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
         <a class="navbar-brand mx-auto" href="main.html">
-            <img src="../images/logo.png" class="w-50 mx-auto d-block" alt="...">
+            <img src="../static/images/logo.png" class="w-50 mx-auto d-block" alt="...">
         </a>
         <button class="btn btn-icon btn-transparent-dark order-lg-0 me-2 ms-lg-2 me-lg-0 fs-2" id="sidebarToggle">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -68,34 +80,38 @@
             </svg>
         </button>
     </nav>
-   
-    <div class="mytitle">
-        <h1>메뉴선정결과</h1>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="https://homecuisine.co.kr/files/attach/images/140/817/106/cc2a6e344433e376edd0b57f2ff35481.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-text" >제육볶음</h4>>제육볶음</p>
-        </div>
+    <div class="container mx-auto">
+      <div class="mytitle">
+          <h1>메뉴선정결과</h1>
       </div>
-
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="https://t1.daumcdn.net/cfile/tistory/2412AC3F5246608D27" class="img-fluid rounded-start" alt="...">
+      <div class="card mx-auto" style="max-width: 780px;">
+          <img src="https://homecuisine.co.kr/files/attach/images/140/817/106/cc2a6e344433e376edd0b57f2ff35481.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-text" id="menu">제육볶음</h4>>제육볶음</p>
           </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">새마을식당</h5>
-              <p class="card-text">메뉴 : 고추장제육볶음</p>
-              <p class="card-text">주소 : 서울시 강동구 성내동</p>
+        </div>
+
+      <div class="card mb-3 mx-auto" style="max-width: 780px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://t1.daumcdn.net/cfile/tistory/2412AC3F5246608D27" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">새마을식당</h5>
+                <p class="card-text">메뉴 : 고추장제육볶음</p>
+                <p class="card-text">주소 : 서울시 강동구 성내동</p>
+              </div>
             </div>
           </div>
-        </div>
-    </div>
-    <div class="box bg-1">
-    <button class="button button--wayra button--border-medium button--text-upper button--size-s button--text-thick button--inverted">내주변 맛집 더보기</button>
-    <button class="button button--wayra button--border-thick button--text-upper button--size-s">다른 메뉴 추천받기</button>
+      </div>
+      <div class="box bg-1 mx-auto text-center mb-5">
+        <!--<button class="button button--wayra button--border-medium button--text-upper button--size-s button--text-thick button--inverted">내주변 맛집 더보기</button>
+        <button class="button button--wayra button--border-thick button--text-upper button--size-s">다른 메뉴 추천받기</button>-->
+
+        <button class="btn btn-primary">내주변 맛집 더보기</button>
+        <button class="btn btn-outline-secondary">다른 메뉴 추천받기</button>
+      </div>
     </div>
 </body>
 </html>
